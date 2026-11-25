@@ -1,0 +1,41 @@
+codigo;nome;semestre;creditos;carga_horaria;pre_requisitos;optativa
+CC117;Cálculo Diferencial e Integral I;1;4;68;;Não
+CC118;Geometria Analítica;1;4;68;;Não
+CC116;Matemática Discreta;1;4;68;;Não
+CC119;Organização de Computadores;1;4;68;;Não
+CC115;Programação e Algoritmos;1;4;68;;Não
+CC123;Álgebra Linear para Computação;2;4;68;CC118;Não
+CC121;Arquitetura de Computadores;2;4;68;CC119;Não
+CC122;Cálculo Diferencial e Integral II;2;4;68;CC117;Não
+CC124;Física para Computação;2;4;68;CC117;Não
+CC125;Lógica para Computação;2;4;68;CC116;Não
+CC120;Programação Orientada a Objeto;2;4;68;CC115;Não
+CC128;Cálculo Diferenc. e Integral III;3;4;68;CC122;Não
+CC129;Computação Gráfica;3;4;68;CC123;Não
+CC126;Estrutura de Dados;3;4;68;CC120;Não
+CC130;Probabilidade e Estatística;3;4;68;CC122;Não
+CC127;Sistemas Operacionais;3;4;68;CC121;Não
+CC131;Teoria dos Autômatos e Ling. Formais;3;4;68;CC125;Não
+CC134;Avaliação de Desempenho;4;4;68;CC130;Não
+CC137;Banco de Dados;4;4;68;CC120;Não
+CC135;Cálculo Numérico;4;4;68;CC128;Não
+CC132;Engenharia de Software;4;4;68;CC120;Não
+CC136;Teoria da Computabilidade;4;4;68;CC131;Não
+CC133;Teoria dos Grafos;4;4;68;CC126;Não
+CC141;Análise e Projeto de Software;5;4;68;CC132;Não
+CC154;Extensão I;5;4;68;;Não
+CC140;Inteligência Computacional;5;4;68;CC131;Não
+CC138;Programação Concorrente e Paralela;5;4;68;CC127;Não
+CC142;Projeto e Análise de Algoritmos;5;4;68;CC133;Não
+CC139;Redes de Computadores;5;4;68;CC134;Não
+CL179;Atividades Acadêmicas Cient. e Culturais;99;12;204;;Sim
+CL832;Atividades Específicas de Extensão;99;4;68;;Sim
+CC159;Gerência de Projetos;99;4;68;CC141;Sim
+CT983;Padrões de Software;99;4;68;EXT:CT904;Sim
+CT976;Programação Inteira e Combinatória;99;4;68;EXT:CT911;Sim
+CC083;Qualidade de Software;99;4;68;EXT:CT904;Sim
+CC109;Redes Neurais Artificiais;99;4;68;EXT:CC091;Sim
+CC158;Segurança em Redes;99;4;68;CC139;Sim
+CC202;Tópic. Especiais Intelig. Computacional;99;4;68;CC140;Sim
+CC201;Tópicos Especiais em Programação;99;4;68;CC132;Sim
+CC111;Tópicos Especiais Eng. de Software;99;4;68;CC132;Sim

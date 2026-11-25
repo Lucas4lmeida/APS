@@ -1,0 +1,23 @@
+# Java / Spring Boot
+target/
+build/
+.gradle/
+*.class
+*.log
+
+# Node / React
+node_modules/
+dist/
+coverage/
+
+# IDEs e sistema
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
