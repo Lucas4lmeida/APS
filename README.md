@@ -15,6 +15,7 @@ Nesta versão o sistema não se integra ao SISACAD: o aluno informa o próprio h
 | [docs/prototipo-figma.md](docs/prototipo-figma.md) | Telas do protótipo por HU e telas que ainda faltam desenhar |
 | [docs/revisao-de-discrepancias.md](docs/revisao-de-discrepancias.md) | Discrepâncias encontradas entre HUs, arquitetura e Figma, e a decisão tomada para cada uma |
 | [docs/originais/](docs/originais/) | Histórias de Usuário e Documento de Arquitetura como foram entregues |
+| [backend/](backend/) · [frontend/](frontend/) | Código do MVP: API Spring Boot e front-end React |
 
 Os arquivos em `docs/` (fora de `originais/`) são a referência para o desenvolvimento: onde diferirem dos documentos entregues, valem eles.
 
@@ -29,7 +30,7 @@ Protótipo: [Fluxograma Acadêmico no Figma](https://www.figma.com/design/9nVlzI
 
 ## Situação
 
-Especificação revisada e alinhada com o protótipo (novembro de 2026). Primeira entrega: o MVP da jornada do aluno, no branch [`mvp-aluno`](https://github.com/Lucas4lmeida/APS/tree/mvp-aluno), que roda sem Docker (instruções no README desse branch; escopo na [arquitetura](docs/arquitetura.md#7-entregas)). As telas que faltavam para HU01, HU02, HU17 (cadastro de horários) e HU22 (criar conta) já foram desenhadas. As ações do painel de detalhes (D4) e a navegação única do aluno (D10) já estão no MVP, com os nomes definidos em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam), e ainda precisam ser desenhadas no Figma. Antes de implementar a confirmação de troca (HU13), as ações de Meus planejamentos (HU11), o seletor de planejamento da matrícula (HU14) e a coluna de carga horária do CSV (HU03), desenhar o que ainda está pendente em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam).
+Especificação revisada e alinhada com o protótipo (novembro de 2026). Primeira entrega: o MVP da jornada do aluno, em `backend/` e `frontend/`, que roda sem Docker (veja [Como rodar](#como-rodar-mvp-sem-docker); escopo na [arquitetura](docs/arquitetura.md#7-entregas)). As telas que faltavam para HU01, HU02, HU17 (cadastro de horários) e HU22 (criar conta) já foram desenhadas. As ações do painel de detalhes (D4) e a navegação única do aluno (D10) já estão no MVP, com os nomes definidos em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam), e ainda precisam ser desenhadas no Figma. Antes de implementar a confirmação de troca (HU13), as ações de Meus planejamentos (HU11), o seletor de planejamento da matrícula (HU14) e a coluna de carga horária do CSV (HU03), desenhar o que ainda está pendente em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam).
 
 ## Equipe
 
