@@ -30,7 +30,7 @@ Protótipo: [Fluxograma Acadêmico no Figma](https://www.figma.com/design/9nVlzI
 
 ## Situação
 
-Especificação revisada e alinhada com o protótipo (novembro de 2026). Primeira entrega: o MVP da jornada do aluno, em `backend/` e `frontend/`, que roda sem Docker (veja [Como rodar](#como-rodar-mvp-sem-docker); escopo na [arquitetura](docs/arquitetura.md#7-entregas)). As telas que faltavam para HU01, HU02, HU17 (cadastro de horários) e HU22 (criar conta) já foram desenhadas. As ações do painel de detalhes (D4) e a navegação única do aluno (D10) já estão no MVP, com os nomes definidos em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam), e ainda precisam ser desenhadas no Figma. Antes de implementar a confirmação de troca (HU13), as ações de Meus planejamentos (HU11), o seletor de planejamento da matrícula (HU14) e a coluna de carga horária do CSV (HU03), desenhar o que ainda está pendente em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam).
+Especificação revisada e alinhada com o protótipo (novembro de 2026). Primeira entrega: o MVP da jornada do aluno, em `backend/` e `frontend/`, que roda sem Docker (veja [Como rodar](#como-rodar-mvp-sem-docker); escopo na [arquitetura](docs/arquitetura.md#7-entregas)). As telas que faltavam (D1 a D9, D11 e D12) já foram desenhadas; falta só unificar no Figma a navegação do aluno (D10), que o MVP já implementa. Detalhes em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam).
 
 ## Equipe
 
