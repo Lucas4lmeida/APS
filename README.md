@@ -29,7 +29,7 @@ Protótipo: [Fluxograma Acadêmico no Figma](https://www.figma.com/design/9nVlzI
 
 ## Situação
 
-Especificação revisada e alinhada com o protótipo (novembro de 2026). Próximo passo: estrutura inicial do back-end e do front-end. Antes de implementar as telas de HU01, HU02, HU13, HU17, HU18, HU19 e o cadastro da HU22, desenhar no Figma o que está listado em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam).
+Especificação revisada e alinhada com o protótipo (novembro de 2026). Próximo passo: estrutura inicial do back-end e do front-end. As telas que faltavam para HU01, HU02, HU17 (cadastro de horários) e HU22 (criar conta) já foram desenhadas. Antes de implementar as ações do painel de detalhes (HU09, HU18, HU19), a confirmação de troca (HU13), as ações de Meus planejamentos (HU11), o seletor de planejamento da matrícula (HU14) e a coluna de carga horária do CSV (HU03), desenhar o que ainda está pendente em [Telas que faltam](docs/prototipo-figma.md#telas-que-faltam).
 
 ## Equipe
 

@@ -23,7 +23,7 @@ Também foi considerado o comentário do professor sobre o protótipo: o coorden
 | A. HU × Arquitetura | 12 | 📘 todos resolvidos na especificação |
 | B. Figma × HU/Arquitetura (funcionalidades) | 18 | 📘 resolvidos; parte também ✅ no Figma; 6 dependem de tela nova 🟡 |
 | C. Dados inconsistentes dentro do Figma | 8 | ✅ corrigidos no Figma |
-| D. Telas que faltam no Figma | 12 | 🟡 pendentes (lista em [prototipo-figma.md](prototipo-figma.md#telas-que-faltam)) |
+| D. Telas que faltam no Figma | 12 | ✅ D1, D2, D3, D8 e D11 desenhadas · D5 e D7 em parte · 🟡 D4, D6, D9, D10 e D12 pendentes (lista em [prototipo-figma.md](prototipo-figma.md#telas-que-faltam)) |
 
 ---
 
@@ -84,19 +84,19 @@ Conferido no Figma (somas): 44 obrigatórias = 43 × 4 cr + Estágio 6 cr = 178 
 
 ## D. Telas que faltam no Figma
 
-Sem estas telas as HUs correspondentes não têm base visual para o front-end. A especificação já define o comportamento; falta o desenho. Detalhes em [prototipo-figma.md](prototipo-figma.md#telas-que-faltam).
+Sem estas telas as HUs correspondentes não têm base visual para o front-end. A especificação já define o comportamento. As telas novas estão na página **Revisão nov/2026 — telas novas** do Figma; os campos acrescentados a telas existentes estão na própria tela, na Page 1. Links e detalhes em [prototipo-figma.md](prototipo-figma.md#telas-que-faltam).
 
-| # | Tela | HU |
-|---|---|---|
-| D1 | Criar conta (aluno) | HU22 |
-| D2 | Admin: cursos e coordenadores | HU01 |
-| D3 | Admin: períodos de matrícula | HU02 |
-| D4 | Painel de detalhes com ações: marcar cursada, marcar cursando, desmarcar, "já cumpri este pré-requisito externo" | HU09, HU18, HU19 |
-| D5 | Horários indisponíveis | HU17 |
-| D6 | Simulação de troca: botão "Confirmar troca" e confirmação com as cursadas sem equivalência | HU13 |
-| D7 | Matrícula do período: estado "fora do período" e escolha do planejamento usado | HU14 |
-| D8 | Novo fluxo: campo "Créditos optativos exigidos" | HU03 |
-| D9 | Meus planejamentos: definir como principal, renomear, remover | HU11 |
-| D10 | Navegação única do aluno | — |
-| D11 | Painel do coordenador listando também o fluxo 2027.1 (rascunho/prévia) | HU03, HU20 |
-| D12 | Importar CSV: coluna "Carga horária" na pré-visualização | HU03 |
+| # | Tela | HU | Situação |
+|---|---|---|---|
+| D1 | Criar conta (aluno) | HU22 | ✅ desenhada |
+| D2 | Admin: cursos e coordenadores | HU01 | ✅ desenhadas (Admin · Cursos e Admin · Coordenadores do curso) |
+| D3 | Admin: períodos de matrícula | HU02 | ✅ desenhada |
+| D4 | Painel de detalhes com ações: marcar cursada, marcar cursando, desmarcar, "já cumpri este pré-requisito externo" | HU09, HU18, HU19 | 🟡 pendente |
+| D5 | Horários indisponíveis | HU17 | ✅ cadastro desenhado · 🟡 falta o aviso de conflito na Matrícula do período |
+| D6 | Simulação de troca: botão "Confirmar troca" e confirmação com as cursadas sem equivalência | HU13 | 🟡 pendente |
+| D7 | Matrícula do período: estado "fora do período" e escolha do planejamento usado | HU14 | ✅ estado "fora do período" · 🟡 falta o seletor do planejamento |
+| D8 | Novo fluxo: campo "Créditos optativos exigidos" | HU03 | ✅ incluído na tela existente |
+| D9 | Meus planejamentos: definir como principal, renomear, remover | HU11 | 🟡 pendente |
+| D10 | Navegação única do aluno | — | 🟡 pendente |
+| D11 | Painel do coordenador listando também o fluxo 2027.1 (rascunho/prévia) | HU03, HU20 | ✅ incluído na tela existente |
+| D12 | Importar CSV: coluna "Carga horária" na pré-visualização | HU03 | 🟡 pendente |
