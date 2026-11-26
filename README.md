@@ -1,6 +1,6 @@
 # APS — Fluxograma Interativo para Planejamento Acadêmico
 
-Projeto da disciplina **Análise e Projeto de Software** (Ciência da Computação). Cliente: Alicia Paiva.
+Projeto da disciplina **Análise e Projeto de Software** (Ciência da Computação).
 
 O SISACAD mostra a matriz curricular como um fluxograma estático. Este sistema torna o fluxograma interativo: o aluno acompanha o próprio progresso, vê a cadeia de pré-requisitos de cada disciplina, simula planejamentos de matrícula semestre a semestre até a formatura e testa a troca de fluxo. O coordenador monta e ajusta os fluxos (matrizes curriculares) num editor visual, cadastra equivalências e a oferta de cada período; o admin institucional cuida de cursos, coordenadores e períodos de matrícula.
 
@@ -44,7 +44,7 @@ Especificação revisada e alinhada com o protótipo (novembro de 2026). Primeir
 
 O MVP cobre a jornada do aluno: criar conta e entrar (HU22), escolher o fluxo (HU06), ver a matriz com os estados e o resumo (HU08), marcar as disciplinas já cursadas (HU07), abrir os detalhes com a cadeia de pré-requisitos em modo foco (HU09) e marcar ou desmarcar cursando e cursada (HU18, HU19).
 
-Precisa de **Java 21** e **Node.js 20 ou mais novo**. Não precisa de Docker, Maven nem PostgreSQL instalados.
+Precisa de **Java 21** e **Node.js 20 ou mais novo**.
 
 **1. API** (num terminal):
 
