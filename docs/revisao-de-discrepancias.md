@@ -91,12 +91,12 @@ Sem estas telas as HUs correspondentes não têm base visual para o front-end. A
 | D1 | Criar conta (aluno) | HU22 | ✅ desenhada |
 | D2 | Admin: cursos e coordenadores | HU01 | ✅ desenhadas (Admin · Cursos e Admin · Coordenadores do curso) |
 | D3 | Admin: períodos de matrícula | HU02 | ✅ desenhada |
-| D4 | Painel de detalhes com ações: marcar cursada, marcar cursando, desmarcar, "já cumpri este pré-requisito externo" | HU09, HU18, HU19 | 🟡 pendente |
+| D4 | Painel de detalhes com ações: marcar cursada, marcar cursando, desmarcar, "já cumpri este pré-requisito externo" | HU09, HU18, HU19 | 🟡 falta no Figma (já implementado no MVP) |
 | D5 | Horários indisponíveis | HU17 | ✅ cadastro desenhado · 🟡 falta o aviso de conflito na Matrícula do período |
 | D6 | Simulação de troca: botão "Confirmar troca" e confirmação com as cursadas sem equivalência | HU13 | 🟡 pendente |
 | D7 | Matrícula do período: estado "fora do período" e escolha do planejamento usado | HU14 | ✅ estado "fora do período" · 🟡 falta o seletor do planejamento |
 | D8 | Novo fluxo: campo "Créditos optativos exigidos" | HU03 | ✅ incluído na tela existente |
 | D9 | Meus planejamentos: definir como principal, renomear, remover | HU11 | 🟡 pendente |
-| D10 | Navegação única do aluno | — | 🟡 pendente |
+| D10 | Navegação única do aluno | — | 🟡 falta no Figma (já implementada no MVP) |
 | D11 | Painel do coordenador listando também o fluxo 2027.1 (rascunho/prévia) | HU03, HU20 | ✅ incluído na tela existente |
 | D12 | Importar CSV: coluna "Carga horária" na pré-visualização | HU03 | 🟡 pendente |

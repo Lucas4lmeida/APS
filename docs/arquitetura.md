@@ -28,7 +28,7 @@ flowchart LR
 | Banco de dados | PostgreSQL | Domínio relacional; restrição de exclusão para períodos sobrepostos (HU02) |
 | Autenticação | JWT com o papel no token | API sem estado e controle por ator |
 | Documentação da API | OpenAPI com springdoc-openapi, em `/swagger-ui` | Contrato sempre atualizado |
-| Ambiente | Docker Compose (Spring Boot + PostgreSQL) | Ambiente idêntico para todos |
+| Ambiente | Docker Compose (Spring Boot + PostgreSQL), depois do MVP; até lá, execução local sem Docker (seção 6) | Ambiente idêntico para todos; o MVP roda só com Java e Node |
 
 Dentro do back-end, cada camada só usa a imediatamente inferior. Microsserviços continuam descartados.
 
@@ -39,6 +39,7 @@ Dentro do back-end, cada camada só usa a imediatamente inferior. Microsserviço
 - **Coordenador:** fluxos, semestres, disciplinas, equivalências e ofertas **do curso ao qual está vinculado**. Fora dele: 403.
 - **Aluno:** só os próprios dados (fluxo, marcações, planejamentos, horários indisponíveis). Dados de outro aluno: 403.
 - Cadastro do aluno: matrícula, nome, e-mail e senha (HU22). Login: e-mail **ou** matrícula + senha.
+- Senha com no mínimo 8 caracteres (cadastro do aluno e senha inicial do coordenador). O token JWT vale 8 horas; depois disso, novo login.
 - Coordenadores são criados pelo admin (HU01). O primeiro admin é inserido por migração de dados iniciais.
 - Recuperação de senha está fora desta versão (o link foi removido do protótipo).
 
@@ -209,4 +210,16 @@ PUT e DELETE são idempotentes.
 
 ## 6. Ambiente
 
-`docker-compose` com um container Spring Boot e um PostgreSQL, para todos rodarem o projeto do mesmo jeito sem instalar JDK e Postgres manualmente.
+**Agora (MVP): execução local, sem Docker.** Basta Java 21 e Node.js 20 ou mais novo; os comandos estão no README.
+
+- **API:** `./mvnw spring-boot:test-run` (Maven Wrapper, sem instalar o Maven) sobe o Spring Boot com um PostgreSQL embutido, o mesmo dos testes de integração, com os dados em `~/.aps-fluxograma/pg-dados`. Com um PostgreSQL próprio: `./mvnw spring-boot:run` e as variáveis `DB_URL`, `DB_USUARIO` e `DB_SENHA`.
+- **Front-end:** `npm run dev` (Vite), que repassa `/api` para a API na porta 8080.
+- **Dados de desenvolvimento:** o perfil `dev`, padrão, cria o curso CC, o fluxo 2023.1 lido de `docs/exemplos/modelo-fluxo.csv`, um admin, um coordenador e uma aluna de demonstração com os semestres 1 a 4 cursados. As senhas valem só para desenvolvimento e estão no README; em produção usa-se o perfil `prod`, sem esses dados.
+- **Windows:** a API guarda os sockets locais do Java em `~/.aps-fluxograma/sockets`, porque em algumas máquinas a pasta temporária do sistema impede o servidor web de subir.
+
+**Depois: Docker Compose.** Um container Spring Boot, um PostgreSQL e o front-end servido junto, para todos rodarem o projeto do mesmo jeito sem instalar JDK e Postgres.
+
+## 7. Entregas
+
+- **MVP — jornada do aluno:** HU22 (criar conta e entrar), HU06 (escolher o fluxo), HU07 (marcar cursadas), HU08 (matriz com estados e resumo), HU09 (detalhes e modo foco) e HU18/HU19 (cursando, desmarcar). No MVP o admin existe só nos dados de desenvolvimento; a migração do primeiro admin (seção 2) entra com as telas do admin.
+- **Próximas:** telas do coordenador e do admin (HU01 a HU05, HU20), simulação, planejamentos e previsão (HU10, HU11, HU21), troca de fluxo (HU12, HU13), matrícula do período e horários (HU14 a HU17) e a dockerização.

@@ -315,7 +315,7 @@ Como um **usuário (aluno, coordenador ou admin institucional)**, eu quero **ent
 
 **Critérios de aceitação:**
 
-- O aluno cria a própria conta informando matrícula, nome, e-mail e senha; o papel Aluno é atribuído automaticamente
+- O aluno cria a própria conta informando matrícula, nome, e-mail e senha (mínimo de 8 caracteres); o papel Aluno é atribuído automaticamente
 - Coordenadores são cadastrados pelo admin institucional (HU01), e o primeiro admin institucional é criado na instalação do sistema
 - Matrícula e e-mail não podem estar em uso por outra conta
 - O login aceita e-mail ou matrícula (no caso do aluno) e senha; credenciais inválidas exibem uma mensagem de erro sem indicar qual dos dois campos está incorreto
