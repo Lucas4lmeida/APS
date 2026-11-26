@@ -1,5 +1,6 @@
 /* Cores e tipografia do protótipo (Figma "Fluxograma Acadêmico"). */
 :root {
+  color-scheme: only light;
   --fundo: #faf7f2;
   --superficie: #ffffff;
   --linha: #e5e1da;
@@ -458,21 +459,6 @@ input {
   font-size: 0.9rem;
 }
 
-.demo {
-  margin-top: 8px;
-  padding: 14px;
-  border: 1px dashed var(--linha-forte);
-  border-radius: 10px;
-  font-size: 0.84rem;
-  color: var(--apoio);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.demo p {
-  margin: 0;
-}
 
 /* ---------- Selecionar fluxo ---------- */
 .lista-cursos {

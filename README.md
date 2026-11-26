@@ -71,7 +71,7 @@ Abra http://localhost:5173. O Vite repassa as chamadas `/api` para a API na port
 
 | Papel | Login | Senha |
 |---|---|---|
-| Aluna de demonstração (Ana Costa, semestres 1 a 4 cursados) | `2023100001` ou `ana.costa@aps.dev` | `aluno123` |
+| Aluno de demonstração (Aluno Demonstração, semestres 1 a 4 cursados) | `2023100001` ou `aluno.demo@aps.dev` | `aluno123` |
 | Coordenador | `coordenacao.cc@aps.dev` | `coord123` |
 | Admin institucional | `admin@aps.dev` | `admin123` |
 

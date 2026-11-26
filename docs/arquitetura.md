@@ -214,7 +214,7 @@ PUT e DELETE são idempotentes.
 
 - **API:** `./mvnw spring-boot:test-run` (Maven Wrapper, sem instalar o Maven) sobe o Spring Boot com um PostgreSQL embutido, o mesmo dos testes de integração, com os dados em `~/.aps-fluxograma/pg-dados`. Com um PostgreSQL próprio: `./mvnw spring-boot:run` e as variáveis `DB_URL`, `DB_USUARIO` e `DB_SENHA`.
 - **Front-end:** `npm run dev` (Vite), que repassa `/api` para a API na porta 8080.
-- **Dados de desenvolvimento:** o perfil `dev`, padrão, cria o curso CC, o fluxo 2023.1 lido de `docs/exemplos/modelo-fluxo.csv`, um admin, um coordenador e uma aluna de demonstração com os semestres 1 a 4 cursados. As senhas valem só para desenvolvimento e estão no README; em produção usa-se o perfil `prod`, sem esses dados.
+- **Dados de desenvolvimento:** o perfil `dev`, padrão, cria o curso CC, o fluxo 2023.1 lido de `docs/exemplos/modelo-fluxo.csv`, um admin, um coordenador e um aluno de demonstração, com nome genérico, com os semestres 1 a 4 cursados. As senhas valem só para desenvolvimento e estão no README; em produção usa-se o perfil `prod`, sem esses dados.
 - **Windows:** a API guarda os sockets locais do Java em `~/.aps-fluxograma/sockets`, porque em algumas máquinas a pasta temporária do sistema impede o servidor web de subir.
 
 **Depois: Docker Compose.** Um container Spring Boot, um PostgreSQL e o front-end servido junto, para todos rodarem o projeto do mesmo jeito sem instalar JDK e Postgres.

@@ -3,10 +3,6 @@ import { api, ErroApi } from '../api'
 import type { Sessao } from '../tipos'
 import { Marca } from '../componentes/Topo'
 
-// Conta criada pelos dados de desenvolvimento do back-end (perfil "dev"). Defina VITE_DEMO=nao para esconder.
-const DEMO = { login: '2023100001', senha: 'aluno123' }
-const MOSTRAR_DEMO = import.meta.env.VITE_DEMO !== 'nao'
-
 export function Acesso({ aoEntrar }: { aoEntrar: (sessao: Sessao) => void }) {
   const [modo, setModo] = useState<'login' | 'cadastro'>('login')
 
@@ -36,21 +32,17 @@ function Login({ aoEntrar, aoCriarConta }: { aoEntrar: (s: Sessao) => void; aoCr
   const [erro, setErro] = useState<string | null>(null)
   const [enviando, setEnviando] = useState(false)
 
-  async function entrar(dados: { login: string; senha: string }) {
+  async function enviar(evento: FormEvent) {
+    evento.preventDefault()
     setErro(null)
     setEnviando(true)
     try {
-      aoEntrar(await api.login(dados.login.trim(), dados.senha))
+      aoEntrar(await api.login(login.trim(), senha))
     } catch (e) {
       setErro(e instanceof ErroApi ? e.message : 'Não foi possível entrar')
     } finally {
       setEnviando(false)
     }
-  }
-
-  function enviar(evento: FormEvent) {
-    evento.preventDefault()
-    void entrar({ login, senha })
   }
 
   return (
@@ -89,18 +81,6 @@ function Login({ aoEntrar, aoCriarConta }: { aoEntrar: (s: Sessao) => void; aoCr
           Criar conta
         </button>
       </p>
-
-      {MOSTRAR_DEMO && (
-        <div className="demo">
-          <p>
-            <strong>Conta de demonstração</strong> (dados de desenvolvimento): matrícula {DEMO.login}, senha{' '}
-            {DEMO.senha}. A aluna já concluiu os semestres 1 a 4.
-          </p>
-          <button type="button" className="botao secundario" disabled={enviando} onClick={() => void entrar(DEMO)}>
-            Entrar como Ana Costa
-          </button>
-        </div>
-      )}
     </form>
   )
 }

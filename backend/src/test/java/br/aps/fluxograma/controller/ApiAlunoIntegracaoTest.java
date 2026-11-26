@@ -242,11 +242,12 @@ class ApiAlunoIntegracaoTest {
 	}
 
 	@Test
-	@DisplayName("Seed: aluna de demonstração com os semestres 1 a 4 cursados")
-	void alunaDeDemonstracao() throws Exception {
-		Sessao ana = login(DadosDesenvolvimento.ALUNA_MATRICULA, DadosDesenvolvimento.ALUNA_SENHA);
+	@DisplayName("Seed: aluno de demonstração com os semestres 1 a 4 cursados")
+	void alunoDeDemonstracao() throws Exception {
+		Sessao demo = login(DadosDesenvolvimento.ALUNO_MATRICULA, DadosDesenvolvimento.ALUNO_SENHA);
 
-		String corpo = fluxograma(ana);
+		String corpo = fluxograma(demo);
+		assertThat((String) JsonPath.read(corpo, "$.aluno.nome")).isEqualTo(DadosDesenvolvimento.ALUNO_NOME);
 		assertThat((Integer) JsonPath.read(corpo, "$.resumo.cursadas")).isEqualTo(23);
 		assertThat((Integer) JsonPath.read(corpo, "$.resumo.creditosConcluidos")).isEqualTo(92);
 		assertThat((Integer) JsonPath.read(corpo, "$.resumo.percentualConcluido")).isEqualTo(69); // 92 de 132

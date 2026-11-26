@@ -39,7 +39,7 @@ import br.aps.fluxograma.service.LeitorCsvFluxo;
  * <ul>
  * <li>curso CC e fluxo 2023.1 publicado, lido de docs/exemplos/modelo-fluxo.csv;</li>
  * <li>admin institucional e coordenador de exemplo;</li>
- * <li>aluna de demonstração com os semestres 1 a 4 cursados.</li>
+ * <li>aluno de demonstração (nome genérico) com os semestres 1 a 4 cursados.</li>
  * </ul>
  */
 @Component
@@ -64,14 +64,16 @@ public class DadosDesenvolvimento implements ApplicationRunner {
 
 	public static final String COORDENADOR_SENHA = "coord123";
 
-	public static final String ALUNA_EMAIL = "ana.costa@aps.dev";
+	public static final String ALUNO_EMAIL = "aluno.demo@aps.dev";
 
-	public static final String ALUNA_MATRICULA = "2023100001";
+	public static final String ALUNO_NOME = "Aluno Demonstração";
 
-	public static final String ALUNA_SENHA = "aluno123";
+	public static final String ALUNO_MATRICULA = "2023100001";
 
-	/** A aluna de demonstração já concluiu os semestres 1 a 4 (23 disciplinas). */
-	private static final int ALUNA_SEMESTRES_CURSADOS = 4;
+	public static final String ALUNO_SENHA = "aluno123";
+
+	/** O aluno de demonstração já concluiu os semestres 1 a 4 (23 disciplinas). */
+	private static final int ALUNO_SEMESTRES_CURSADOS = 4;
 
 	private final CursoRepository cursoRepository;
 
@@ -110,8 +112,8 @@ public class DadosDesenvolvimento implements ApplicationRunner {
 	public void run(ApplicationArguments args) {
 		transacao.executeWithoutResult(status -> carregar());
 		log.info("Dados de desenvolvimento prontos. Logins: {} / {} (admin), {} / {} (coordenador), "
-				+ "{} ou {} / {} (aluna de demonstração)", ADMIN_EMAIL, ADMIN_SENHA, COORDENADOR_EMAIL,
-				COORDENADOR_SENHA, ALUNA_MATRICULA, ALUNA_EMAIL, ALUNA_SENHA);
+				+ "{} ou {} / {} (aluno de demonstração)", ADMIN_EMAIL, ADMIN_SENHA, COORDENADOR_EMAIL,
+				COORDENADOR_SENHA, ALUNO_MATRICULA, ALUNO_EMAIL, ALUNO_SENHA);
 	}
 
 	private void carregar() {
@@ -129,14 +131,14 @@ public class DadosDesenvolvimento implements ApplicationRunner {
 			usuarioRepository.save(new Coordenador(COORDENADOR_EMAIL, "Coordenação de Ciência da Computação",
 					codificador.encode(COORDENADOR_SENHA), curso));
 		}
-		if (!alunoRepository.existsByMatricula(ALUNA_MATRICULA)) {
-			Aluno aluna = new Aluno(ALUNA_EMAIL, "Ana Costa", codificador.encode(ALUNA_SENHA), ALUNA_MATRICULA);
-			aluna.setFluxo(fluxo);
-			Aluno salva = alunoRepository.save(aluna);
+		if (!alunoRepository.existsByMatricula(ALUNO_MATRICULA)) {
+			Aluno demo = new Aluno(ALUNO_EMAIL, ALUNO_NOME, codificador.encode(ALUNO_SENHA), ALUNO_MATRICULA);
+			demo.setFluxo(fluxo);
+			Aluno salvo = alunoRepository.save(demo);
 			disciplinaRepository.findByFluxoComPreRequisitos(fluxo.getId())
 				.stream()
-				.filter(d -> d.getTipo() == TipoDisciplina.OBRIGATORIA && d.getSemestre() <= ALUNA_SEMESTRES_CURSADOS)
-				.forEach(d -> cursaRepository.save(new Cursa(salva.getId(), d.getId(), Situacao.CURSADA)));
+				.filter(d -> d.getTipo() == TipoDisciplina.OBRIGATORIA && d.getSemestre() <= ALUNO_SEMESTRES_CURSADOS)
+				.forEach(d -> cursaRepository.save(new Cursa(salvo.getId(), d.getId(), Situacao.CURSADA)));
 		}
 	}
 
