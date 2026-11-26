@@ -5,14 +5,19 @@ import react from '@vitejs/plugin-react'
 // (porta 8080), sem precisar de CORS. Depois, no Docker, o mesmo papel fica com o servidor web.
 const proxyApi = {
   '/api': {
-    target: 'http://localhost:8080',
+    target: 'http://127.0.0.1:8080',
     changeOrigin: true,
     rewrite: (caminho: string) => caminho.replace(/^\/api/, ''),
   },
 }
 
+// Endereço IPv4 explícito: com "localhost", o Node no Windows escuta só em [::1] e navegadores que
+// resolvem localhost para 127.0.0.1 recebem "conexão recusada". http://localhost:5173 continua
+// funcionando, e o servidor segue acessível só neste computador.
+const host = '127.0.0.1'
+
 export default defineConfig({
   plugins: [react()],
-  server: { port: 5173, proxy: proxyApi },
-  preview: { port: 4173, proxy: proxyApi },
+  server: { host, port: 5173, strictPort: true, proxy: proxyApi },
+  preview: { host, port: 4173, strictPort: true, proxy: proxyApi },
 })
