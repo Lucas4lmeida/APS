@@ -32,7 +32,7 @@ public final class AuthDtos {
 			@NotBlank(message = "Informe o nome") @Size(max = 255) String nome,
 			@NotBlank(message = "Informe o e-mail") @Email(message = "E-mail inválido") @Size(max = 255) String email,
 			@NotBlank(message = "Informe a senha")
-			@Size(min = 6, max = 100, message = "A senha precisa ter entre 6 e 100 caracteres") String senha) {
+			@Size(min = 8, max = 100, message = "A senha precisa ter entre 8 e 100 caracteres") String senha) {
 	}
 
 	@JsonInclude(JsonInclude.Include.NON_NULL)
