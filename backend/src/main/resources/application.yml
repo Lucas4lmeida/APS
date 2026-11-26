@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: fluxograma
+  profiles:
+    # "dev" carrega os dados de desenvolvimento (DadosDesenvolvimento) e um segredo JWT de dev.
+    # Em produção: SPRING_PROFILES_ACTIVE=prod e JWT_SEGREDO definido.
+    default: dev
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/aps}
+    username: ${DB_USUARIO:aps}
+    password: ${DB_SENHA:aps}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    locations: classpath:db/migration
+
+server:
+  port: ${PORTA:8080}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /v3/api-docs
+
+app:
+  jwt:
+    segredo: ${JWT_SEGREDO:}
+    validade: 8h
+    emissor: aps-fluxograma

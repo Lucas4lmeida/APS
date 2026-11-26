@@ -1,0 +1,4 @@
+# Perfil de desenvolvimento. Nunca use este segredo fora do ambiente local.
+app:
+  jwt:
+    segredo: ${JWT_SEGREDO:segredo-so-para-desenvolvimento-local-aps-2026}
